@@ -222,12 +222,11 @@ class MerchantConfiguration
      * Sets the access token for OAuth
      *
      * @param string $authenticationType Token for OAuth
-     *
-     * @return void
      */
-    public function setAuthenticationType($authenticationType)
+    public function setAuthenticationType($authenticationType): self
     {
         $this->authenticationType = $authenticationType;
+        return $this;
     }
 
     /**
@@ -245,9 +244,9 @@ class MerchantConfiguration
      *
      * @param string $runEnvironment Token for OAuth
      *
-     * @return void
+     *
      */
-    public function setRunEnvironment($runEnvironment)
+    public function setRunEnvironment($runEnvironment): self
     {
         $this->runEnvironment = $runEnvironment;
 
@@ -279,11 +278,12 @@ class MerchantConfiguration
      *
      * @param string $solutionId
      *
-     * @return void
+     *
      */
-    public function setSolutionId($solutionId)
+    public function setSolutionId($solutionId): self
     {
         $this->solutionId = $solutionId;
+        return $this;
     }
 
     /**
@@ -300,11 +300,12 @@ class MerchantConfiguration
      *
      * @param string $merchantID merchantID for HTTP basic authentication
      *
-     * @return void
+     *
      */
-    public function setMerchantID($merchantID)
+    public function setMerchantID($merchantID): self
     {
         $this->merchantID = $merchantID;
+        return $this;
     }
 
     /**
@@ -322,11 +323,12 @@ class MerchantConfiguration
      *
      * @param string $keyAlias merchantID for HTTP basic authentication
      *
-     * @return void
+     *
      */
-    public function setKeyAlias($keyAlias)
+    public function setKeyAlias($keyAlias): self
     {
         $this->keyAlias = $keyAlias;
+        return $this;
     }
 
     /**
@@ -344,11 +346,12 @@ class MerchantConfiguration
      *
      * @param string $keyFilename merchantID for HTTP basic authentication
      *
-     * @return void
+     *
      */
-    public function setKeyFileName($keyFilename)
+    public function setKeyFileName($keyFilename): self
     {
         $this->keyFilename = $keyFilename;
+        return $this;
     }
 
     /**
@@ -366,11 +369,12 @@ class MerchantConfiguration
      *
      * @param string $logFilename merchantID for HTTP basic authentication
      *
-     * @return void
+     *
      */
-    public function setLogFileName($logFilename)
+    public function setLogFileName($logFilename): self
     {
         $this->logFilename = $logFilename;
+        return $this;
     }
 
     /**
@@ -388,11 +392,12 @@ class MerchantConfiguration
      *
      * @param string $keysDirectory merchantID for HTTP basic authentication
      *
-     * @return void
+     *
      */
-    public function setKeysDirectory($keysDirectory)
+    public function setKeysDirectory($keysDirectory): self
     {
         $this->keysDirectory = $keysDirectory;
+        return $this;
     }
 
     /**
@@ -410,11 +415,12 @@ class MerchantConfiguration
      *
      * @param string $password Password for HTTP basic authentication
      *
-     * @return void
+     *
      */
-    public function setKeyPassword($password)
+    public function setKeyPassword($password): self
     {
         $this->password = $password;
+        return $this;
     }
 
     /**
@@ -432,11 +438,12 @@ class MerchantConfiguration
      *
      * @param string $apiKeyID Password for HTTP basic authentication
      *
-     * @return void
+     *
      */
-    public function setApiKeyID($apiKeyID)
+    public function setApiKeyID($apiKeyID): self
     {
         $this->apiKeyID = $apiKeyID;
+        return $this;
     }
 
     /**
@@ -454,11 +461,12 @@ class MerchantConfiguration
      *
      * @param string secretKey for HTTP basic authentication
      *
-     * @return void
+     *
      */
-    public function setSecretKey($secretKey)
+    public function setSecretKey($secretKey): self
     {
         $this->secretKey = $secretKey;
+        return $this;
     }
 
     /**
@@ -476,9 +484,9 @@ class MerchantConfiguration
      *
      * @param bool flag for metakey authentication
      *
-     * @return void
+     *
      */
-    public function setUseMetaKey($useMetaKey)
+    public function setUseMetaKey($useMetaKey): self
     {
         if(!is_null($useMetaKey) && is_bool($useMetaKey))
         {
@@ -488,6 +496,7 @@ class MerchantConfiguration
         {
             $this->useMetaKey = false;
         }
+        return $this;
     }
 
     /**
@@ -505,11 +514,12 @@ class MerchantConfiguration
      *
      * @param string portfolioID for metakey authentication
      *
-     * @return void
+     *
      */
-    public function setPortfolioID($portfolioID)
+    public function setPortfolioID($portfolioID): self
     {
         $this->portfolioID = $portfolioID;
+        return $this;
     }
 
     /**
@@ -529,7 +539,7 @@ class MerchantConfiguration
      *
      * @return $this
      */
-    public function setEnableClientCert($enableClientCert)
+    public function setEnableClientCert($enableClientCert): self
     {
         if(!is_null($enableClientCert) && is_bool($enableClientCert))
         {
@@ -539,6 +549,7 @@ class MerchantConfiguration
         {
             $this->enableClientCert = false;
         }
+        return $this;
     }
 
     /**
@@ -556,11 +567,12 @@ class MerchantConfiguration
      *
      * @param string Directory for Client Cert
      *
-     * @return void
+     *
      */
-    public function setClientCertDirectory($clientCertDirectory)
+    public function setClientCertDirectory($clientCertDirectory): self
     {
         $this->clientCertDirectory = $clientCertDirectory;
+        return $this;
     }
 
     /**
@@ -578,11 +590,12 @@ class MerchantConfiguration
      *
      * @param string Name of Client Cert file
      *
-     * @return void
+     *
      */
-    public function setClientCertFile($clientCertFile)
+    public function setClientCertFile($clientCertFile): self
     {
         $this->clientCertFile = $clientCertFile;
+        return $this;
     }
 
     /**
@@ -600,11 +613,12 @@ class MerchantConfiguration
      *
      * @param string Password for Client Cert file
      *
-     * @return void
+     *
      */
-    public function setClientCertPassword($clientCertPassword)
+    public function setClientCertPassword($clientCertPassword): self
     {
         $this->clientCertPassword = $clientCertPassword;
+        return $this;
     }
 
     /**
@@ -622,11 +636,12 @@ class MerchantConfiguration
      *
      * @param string ClientID for OAuth
      *
-     * @return void
+     *
      */
-    public function setClientId($clientId)
+    public function setClientId($clientId): self
     {
         $this->clientId = $clientId;
+        return $this;
     }
 
     /**
@@ -644,11 +659,12 @@ class MerchantConfiguration
      *
      * @param string Client Secret for OAuth
      *
-     * @return void
+     *
      */
-    public function setClientSecret($clientSecret)
+    public function setClientSecret($clientSecret): self
     {
         $this->clientSecret = $clientSecret;
+        return $this;
     }
 
     /**
@@ -666,11 +682,12 @@ class MerchantConfiguration
      *
      * @param string OAuth Access Token
      *
-     * @return void
+     *
      */
-    public function setAccessToken($accessToken)
+    public function setAccessToken($accessToken): self
     {
         $this->accessToken = $accessToken;
+        return $this;
     }
 
     /**
@@ -688,11 +705,12 @@ class MerchantConfiguration
      *
      * @param string OAuth Refresh Token
      *
-     * @return void
+     *
      */
-    public function setRefreshToken($refreshToken)
+    public function setRefreshToken($refreshToken): self
     {
         $this->refreshToken = $refreshToken;
+        return $this;
     }
 
     /**
@@ -710,11 +728,12 @@ class MerchantConfiguration
      *
      * @param string $Method Password for HTTP basic connection
      *
-     * @return void
+     *
      */
-    public function setMethod($method)
+    public function setMethod($method): self
     {
         $this->method = $method;
+        return $this;
     }
 
     /**
@@ -732,11 +751,12 @@ class MerchantConfiguration
      *
      * @param string $host Host
      *
-     * @return void
+     *
      */
-    public function setHost($host)
+    public function setHost($host): self
     {
         $this->host = $host;
+        return $this;
     }
 
     /**
@@ -754,11 +774,12 @@ class MerchantConfiguration
      *
      * @param string $proxyHost HTTP Proxy URL
      *
-     * @return void
+     *
      */
-    public function setCurlProxyHost($proxyHost)
+    public function setCurlProxyHost($proxyHost): self
     {
         $this->proxyHost = $proxyHost;
+        return $this;
     }
 
     /**
@@ -776,11 +797,12 @@ class MerchantConfiguration
      *
      * @param integer $proxyPort HTTP Proxy Port
      *
-     * @return void
+     *
      */
-    public function setCurlProxyPort($proxyPort)
+    public function setCurlProxyPort($proxyPort): self
     {
         $this->proxyPort = $proxyPort;
+        return $this;
     }
 
     /**
@@ -798,11 +820,12 @@ class MerchantConfiguration
      *
      * @param LogConfiguration $logConfig Logging Configuration
      *
-     * @return void
+     *
      */
-    public function setLogConfiguration($logConfig)
+    public function setLogConfiguration($logConfig): self
     {
         $this->logConfig = $logConfig;
+        return $this;
     }
 
     /**
